@@ -45,17 +45,17 @@ function draw(){
 
 
 function shapeGame(){
-  window.location("./matchtheshape.html")
+  window.location("./matchtheshape.html");
 }
 
 function colorGame(){
-  background('black');
+  window.location("colormeright.html");
 }
 
 function traceGame(){
-  background('brown');
+  window.location("tracinggame.html");
 }
 
 function wordGame(){
-  background('orange');
+  window.location("buildingwords.html");
 }
