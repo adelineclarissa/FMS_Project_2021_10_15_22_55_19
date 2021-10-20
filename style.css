@@ -5,17 +5,26 @@ html, body {
 canvas {
   display: block;
 }
-button {
-  background-color: #04AA6D; /* Green */
-  border: none;
-  border-radius: 20px;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
+ button {
   display: inline-block;
-  font-size: 16px;
-  font-family: Comic Sans MS, Comic Sans, cursive;
-  margin: 4px 2px;
+  padding: 20px 30px;
+  font-size: 24px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: solid;
+  outline: none;
+  color: black;
+  background-color: #FAD518; /*default color*/
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: 'Balsamiq Sans', cursive;
 }
+
+button:hover {background-color: #f7cd00}
+
+button:active {
+  background-color: #f7cd00;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} 
