@@ -1,6 +1,14 @@
+let bg;
+
+function preload() {
+  bg = loadImage('assets/home_bg.png');
+}
+
 function setup() {
+  
   createCanvas(windowWidth, windowHeight);
-  background('#9BDEEB');
+  imageMode(CORNER);
+  image(bg, 0, 0, windowWidth, windowHeight);
 
   start_button = createButton("START");
   start_button.position(windowWidth*3/5,windowHeight*1/3);

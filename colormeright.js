@@ -9,5 +9,5 @@ function setup() {
 }
 
 function toHome() {
-  window.location = "home.html";
+  window.location = "index.html";
 }
