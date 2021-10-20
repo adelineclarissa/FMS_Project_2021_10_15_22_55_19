@@ -1,11 +1,3 @@
-let canvasWidth = 600, canvasHeight = 400;
-let balsamiq;
-let start_button, ins_button;
-
-function preload() {
-  balsamiq = loadFont('assets/BalsamiqSans-Bold.ttf');
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background('#9BDEEB');
