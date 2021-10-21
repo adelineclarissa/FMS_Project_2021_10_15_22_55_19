@@ -36,19 +36,19 @@ function toHome() {
     window.location = "index.html";
 }
 
-function shapeGame(){
-    window.location("matchtheshape.html");
+function shapeGame() {
+    window.location = "matchtheshape.html";
+}
+
+function colorGame() {
+  window.location = "colormeright.html"
 }
   
-function colorGame(){
-  window.location("colormeright.html");
+function traceGame() {
+  window.location = "tracinggame.html"
 }
   
-function traceGame(){
-  window.location("tracinggame.html");
-}
-  
-function wordGame(){
-  window.location("buildingwords.html");
+function wordGame() {
+  window.location = "buildingwords.html"
 }  
 
