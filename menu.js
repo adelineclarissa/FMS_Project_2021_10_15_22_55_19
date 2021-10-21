@@ -27,18 +27,18 @@ function setup() {
 }
 
 function shapeGame(){
-    window.location("matchtheshape.html");
+  window.location = "matchtheshape.html"
   }
   
 function colorGame(){
-  window.location("colormeright.html");
+  window.location = "colormeright.html"
 }
   
 function traceGame(){
-  window.location("tracinggame.html");
+  window.location = "tracinggame.html"
 }
   
 function wordGame(){
-  window.location("buildingwords.html");
+  window.location = "buildingwords.html"
 }  
 
