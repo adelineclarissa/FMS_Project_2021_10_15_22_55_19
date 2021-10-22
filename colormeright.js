@@ -1,14 +1,19 @@
 let score = 0;
 let success = false;
-let q;
 let apple, orange, avocado, banana, grape;
+let myFont;
 
 function preload() {
+
+  // Load images
   apple = loadImage('assets/apple.png');
   avocado = loadImage('assets/avocado.png');
   orange = loadImage('assets/orange.png');
   banana = loadImage('assets/banana.png');
   grape = loadImage('assets/grape.png');
+
+  // Load font
+  myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
 }
 
 function setup() {
@@ -19,9 +24,14 @@ function setup() {
   homeButton.position(0,0);
   homeButton.mouseReleased(toHome);
 
-  textSize(30);
-  // TODO: Change the font into BalsamiqSans
-  text('Click on the object that matches the color of the cloud!', 200, 200);
+  textSize(40);
+  textFont(myFont);
+  text('Which object has the same\ncolor as the cloud?', 200, 250);
+
+  // format: image, x, y, sizex, sizey
+  image(apple, 200, 400, 200, 200);
+  image(grape, 500, 400, 200, 200);
+  image(orange, 800, 400, 200, 200);
 
 }
 
@@ -30,7 +40,7 @@ function toHome() {
 }
 
 function level1() {
-  
+  //Image(apple, 100, 100);
 }
 
 function level2() {

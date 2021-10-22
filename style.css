@@ -9,6 +9,7 @@ canvas {
   display: inline-block;
   padding: 30px 50px;
   font-size: 35px;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
   text-decoration: solid;

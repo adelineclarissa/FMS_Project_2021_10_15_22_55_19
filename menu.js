@@ -20,13 +20,13 @@ function setup() {
     traceButton = createButton('Tracing Game!')
     wordButton = createButton('Building Words!')
     
-    matchButton.position(250,200);
+    matchButton.position(300,200);
     matchButton.style('background-color', '#E56365');
     
     colorButton.position(850,200)
     colorButton.style('background-color', '#FAD518');
     
-    traceButton.position(250,400);
+    traceButton.position(300,400);
     traceButton.style('background-color', '#79DB87');
     
     wordButton.position(850,400);
