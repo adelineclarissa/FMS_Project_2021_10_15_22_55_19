@@ -1,6 +1,13 @@
+let bg; 
+
+function preload() {
+  bg = loadImage('assets/menu_bg.png');
+}
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background('#9BDEFB');
+    imageMode(CORNER);
+    image(bg, 0, 0, windowWidth, windowHeight);
 
     // Home button
     homeButton = createButton("Home");
@@ -13,16 +20,16 @@ function setup() {
     traceButton = createButton('Tracing Game!')
     wordButton = createButton('Building Words!')
     
-    matchButton.position(200,windowHeight*1/3);
+    matchButton.position(250,200);
     matchButton.style('background-color', '#E56365');
     
-    colorButton.position(800,windowHeight*1/3)
+    colorButton.position(850,200)
     colorButton.style('background-color', '#FAD518');
     
-    traceButton.position(200,windowHeight*2/3);
+    traceButton.position(250,400);
     traceButton.style('background-color', '#79DB87');
     
-    wordButton.position(800,windowHeight*2/3);
+    wordButton.position(850,400);
     wordButton.style('background-color', '#62A2DD');
     
     matchButton.mousePressed(shapeGame)
