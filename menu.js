@@ -40,15 +40,15 @@ function setup() {
 }
 
 function toHome() {
-    window.location = "index.html";
+  window.location = "index.html";
 }
 
 function shapeGame() {
-    window.location = "matchtheshape.html";
+  window.location = "matchtheshape.html";
 }
 
 function colorGame() {
-  window.location = "colormeright.html"
+  window.location = "colorMe_1.html"
 }
   
 function traceGame() {
