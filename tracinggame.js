@@ -22,3 +22,8 @@ function setup() {
 function toHome() {
   window.location = "index.html";
 }
+
+function mouseDragged(){
+  fill('black');
+	ellipse(mouseX, mouseY, 20, 20); 
+}
