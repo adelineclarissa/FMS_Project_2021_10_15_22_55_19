@@ -6,13 +6,14 @@ function setup() {
   homeButton.position(0,0);
   homeButton.mouseReleased(toHome);
 
-  resetButton = createButton("Home");
-  homebutton.position(windowWidth, windowHeight)
-  homebutton.mousePressed(clearCanvas);
+  resetButton = createButton("Reset");
+  resetButton.position(800, 0);
+  resetButton.mouseReleased(clearCanvas);
 }
 
 function clearCanvas(){
   clear();
+  background('#9BDEEB');
 }
 
 function toHome() {
