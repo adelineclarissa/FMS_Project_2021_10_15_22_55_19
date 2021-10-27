@@ -27,7 +27,3 @@ function toMenu(){
 function toInstructions() {
   window.location = "instructions.html"
 }
-
-function draw() {
-
-}
