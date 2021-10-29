@@ -13,7 +13,7 @@ function setup() {
   backButton = createButton("Back");
   backButton.position(1720,0);
   backButton.style('background-color', '#F2BCD6');
-  backButton.style('padding', '20px 40px');
+  backButton.style('padding', '220x 40px');
   backButton.style('font-size', '22px');
   backButton.mouseReleased(toMenu);
 
