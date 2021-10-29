@@ -18,7 +18,7 @@ function setup() {
   backButton.mouseReleased(toMenu);
 
   resetButton = createButton("Reset");
-  resetButton.position(1600, 800);
+  resetButton.position(1720, 850);
   resetButton.style('background-color', '#F2BCD6');
   resetButton.style('padding', '20px 40px');
   resetButton.style('font-size', '22px');
