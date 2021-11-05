@@ -9,10 +9,14 @@ function setup() {
     imageMode(CORNER);
     image(bg, 0, 0, windowWidth, windowHeight);
 
-    // Home button
+    // home button
     homeButton = createButton("Home");
     homeButton.position(0,0);
+    homeButton.style('background-color', '#D3A6ED');
+    homeButton.style('padding', '20px 40px');
+    homeButton.style('font-size', '22px');
     homeButton.mouseReleased(toHome);
+
 
     // Games buttons
     matchButton = createButton('Match the shape!')

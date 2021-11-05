@@ -31,7 +31,7 @@ function setup() {
 
   // menu button
   menuButton = createButton("Menu");
-  menuButton.position(150,0);
+  menuButton.position(140,0);
   menuButton.style('background-color', '#F2BCD6');
   menuButton.style('padding', '20px 40px');
   menuButton.style('font-size', '22px');

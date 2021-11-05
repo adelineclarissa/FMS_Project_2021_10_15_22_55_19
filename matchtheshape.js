@@ -1,3 +1,5 @@
+let shape1, shape2;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background('#9BDEEB');
