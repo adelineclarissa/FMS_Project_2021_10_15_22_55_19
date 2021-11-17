@@ -7,6 +7,8 @@ function preload() {
     correctAns = loadImage('assets/correct_building.png.jpg');
     wrongAns = loadImage('assets/wrong_building.png.jpg');
 
+    myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
+
   }
   
   
@@ -23,8 +25,8 @@ function preload() {
     homeButton.mouseReleased(toHome);
   
     // menu button
-    backButton = createButton("Back");
-    backButton.position(141,0);
+    backButton = createButton("Menu");
+    backButton.position(140,0);
     backButton.style('background-color', '#D3A6ED');
     backButton.style('padding', '20px 40px');
     backButton.style('font-size', '22px');
@@ -32,7 +34,6 @@ function preload() {
   
     // Text 
     textSize(40);
-    myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
     textFont(myFont);
     text("Can you guess the word ?", 200, 200);
   
