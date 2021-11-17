@@ -14,15 +14,16 @@ function setup() {
     homeButton.position(0,0);
     homeButton.style('padding', '20px 40px');
     homeButton.style('font-size', '22px');
+    homeButton.style('background-color', '#D3A6ED');
     homeButton.mouseReleased(toHome);
 
-    // menu button
-    menuButton = createButton("Menu");
-    menuButton.position(140,0);
-    menuButton.style('padding', '20px 40px');
-    menuButton.style('font-size', '22px');
-    menuButton.mouseReleased(toMenu);   
-    
+     // menu button
+     menuButton = createButton("Menu");
+     menuButton.position(140,0);
+     menuButton.style('padding', '20px 40px');
+     menuButton.style('font-size', '22px');
+     menuButton.mouseReleased(toMenu);
+
   }
   
   function toHome() {
