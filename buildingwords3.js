@@ -1,8 +1,12 @@
-
+let userAns = 99;
 function preload() {
 
     earth =loadImage('assets/earth.png')
     oval=loadImage('assets/oval.png')
+
+    correctAns = loadImage('assets/correct_building.png.jpg');
+    wrongAns = loadImage('assets/wrong_building.png.jpg');
+
   }
   
   
