@@ -12,8 +12,8 @@ function setup() {
   homeButton.mouseReleased(toHome);
 
   // back button
-  backButton = createButton("Back");
-  backButton.position(141,0);
+  backButton = createButton("Menu");
+  backButton.position(140,0);
   backButton.style('background-color', '#F2BCD6');
   backButton.style('padding', '20px 40px');
   backButton.style('font-size', '22px');
