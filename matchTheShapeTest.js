@@ -25,15 +25,19 @@ function setup() {
     backButton.style('font-size', '22px');
     backButton.mouseReleased(toMenu);
 
-    bx = width / 2.0;
-    by = height / 2.0;
+    bx = width / 2;
+    by = height / 1.5;
     rectMode(RADIUS);
     strokeWeight(2);
 }
 
 function draw() {
-  background(237, 34, 93);
-
+    background('#9BDEEB');
+    fill('black')
+  blackRect = rect(400,height/3,boxSize,boxSize);
+  ellipse(730,height/3,boxSize*2,boxSize*2);
+  triangle(950,height*(2.3/5),1200,height*(2.3/5),1075,height/5)
+  
   // Test if the cursor is over the box
   if (
     mouseX > bx - boxSize &&
@@ -43,17 +47,31 @@ function draw() {
   ) {
     overBox = true;
     if (!locked) {
+      //stroke(255);
+      fill(244, 122, 158);
+    }
+    
+    // if the box is on top of the correct shadow
+    if (mouseX > bx - boxSize &&
+        mouseX < bx + boxSize &&
+        mouseY > by - boxSize &&
+        mouseY < by + boxSize)
+    {overBox = true;
+    if (!locked) {
       stroke(255);
       fill(244, 122, 158);
     }
   } else {
-    stroke(156, 39, 176);
+    //stroke(156, 39, 176);
     fill(244, 122, 158);
     overBox = false;
   }
 
   // Draw the box
-  rect(bx, by, boxSize, boxSize);
+  fill('red')
+  rect1 = rect(bx, by, boxSize, boxSize);
+
+
 }
 function mousePressed() {
   if (overBox) {
@@ -64,7 +82,9 @@ function mousePressed() {
   }
   xOffset = mouseX - bx;
   yOffset = mouseY - by;
-}
+
+      }
+  }
 
 function mouseDragged() {
   if (locked) {
@@ -74,12 +94,24 @@ function mouseDragged() {
 }
 
 function mouseReleased() {
+    if(mouseX < 475 &
+        mouseX > 400 &
+        mouseY > (height/3) &
+        mouseY < (height*(9/20)) &
+        locked == true
+        )
+    { 
+        delete rect1
+        fill('red')
+        blackRect;}
+        else{
   locked = false;
+        }
 }
 function toMenu(){
     window.location = "menu.html"
-  }
+}
   
-  function toHome() {
+function toHome() {
     window.location = "index.html";
-  }
+}

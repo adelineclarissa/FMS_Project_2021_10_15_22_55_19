@@ -28,7 +28,7 @@ function setup() {
   let triangle1 = createButton("triangle")
   triangle1.position(850,400)
 
-  mouseReleased.circle1(correct)
+  circle1.mouseReleased(correct)
 
 }
 function draw(){
@@ -57,8 +57,6 @@ function draw(){
   }*/
 }
 function correct(){
-    createCanvas(windowWidth, windowHeight);
-    background('#9BDEEB');
   
     // home button
     homeButton = createButton("Home");
