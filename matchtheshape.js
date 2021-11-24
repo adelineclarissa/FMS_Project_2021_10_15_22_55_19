@@ -57,6 +57,8 @@ function draw(){
   }*/
 }
 function correct(){
+    createCanvas(windowWidth, windowHeight);
+    background('#9BDEEB');
   
     // home button
     homeButton = createButton("Home");
