@@ -6,6 +6,16 @@ let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
 let s_fill = '#999999'; // the color of the shadow
+let user_answer = 999;
+
+function preload() {
+
+  correct = loadImage('assets/correct_next.png');
+  wrong = loadImage('assets/wrong.png');
+
+  // Load font
+  myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
+}
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -19,7 +29,7 @@ function setup() {
     homeButton.mouseReleased(toHome);
   
     // back button
-    backButton = createButton("Home");
+    backButton = createButton("Menu");
     backButton.position(140,0);
     backButton.style('background-color', '#F2BCD6');
     backButton.style('padding', '20px 40px');
@@ -34,6 +44,11 @@ function setup() {
 
 function draw() {
     background('#9BDEEB');
+
+    textSize(30);
+    textFont(myFont);
+    fill('black');
+    text('Drag and drop the red box to the grey box!', windowWidth*1/5, 130);
 
     fill(s_fill)
     s_rect = rect(400,height/3,boxSize,boxSize);
@@ -61,6 +76,14 @@ function draw() {
   // Draw the rectangle 
   fill('#E56365')
   rect1 = rect(bx, by, boxSize, boxSize);
+
+  if (user_answer == 0) {
+    wrongAnswer();
+  }
+
+  else if(user_answer == 1) {
+    correctAnswer();
+  }
 
 }
 
@@ -95,7 +118,7 @@ function mouseReleased() {
   )
      {
        s_fill = ('#E56365');
-      
+       user_answer = 1; // the user picked the correct answer
        
      }
 
@@ -108,4 +131,27 @@ function toMenu(){
   
 function toHome() {
     window.location = "index.html";
+}
+
+function wrongAnswer() {
+  imageMode(CORNER);
+  image(wrong, 0, 0, windowWidth, windowHeight);
+}
+
+function correctAnswer() {
+  imageMode(CORNER);
+  image(correct, 0, 0, windowWidth, windowHeight);
+
+  nextButton = createButton("NEXT");
+  nextButton.position(windowWidth*4/5, windowHeight*4/5);
+  nextButton.mousePressed(level2);
+
+}
+
+function level2() {
+  
+}
+
+function level1() {
+  window.location = "matchtheshape.html"
 }
