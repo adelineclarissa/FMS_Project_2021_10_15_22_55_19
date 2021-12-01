@@ -6,21 +6,16 @@ let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
 let s_fill = '#999999'; // the color of the shadow
-let user_answer = 999;
 
 function preload() {
-
-  correct = loadImage('assets/correct_next.png');
-  wrong = loadImage('assets/wrong.png');
-
-  // Load font
-  myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
+  correctAns = loadImage('assets/correct_building.png.jpg');
+  wrongAns = loadImage('assets/wrong_building.png.jpg');
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background('#9BDEEB');
-  
+
     // home button
     homeButton = createButton("Home");
     homeButton.position(0,0);
@@ -29,7 +24,7 @@ function setup() {
     homeButton.mouseReleased(toHome);
   
     // back button
-    backButton = createButton("Menu");
+    backButton = createButton("Home");
     backButton.position(140,0);
     backButton.style('background-color', '#F2BCD6');
     backButton.style('padding', '20px 40px');
@@ -44,11 +39,6 @@ function setup() {
 
 function draw() {
     background('#9BDEEB');
-
-    textSize(30);
-    textFont(myFont);
-    fill('black');
-    text('Drag and drop the red box to the grey box!', windowWidth*1/5, 130);
 
     fill(s_fill)
     s_rect = rect(400,height/3,boxSize,boxSize);
@@ -73,17 +63,9 @@ function draw() {
       overBox = false;
     }
 
-  // Draw the rectangle 
+  // Draw the ellipse
   fill('#E56365')
-  rect1 = rect(bx, by, boxSize, boxSize);
-
-  if (user_answer == 0) {
-    wrongAnswer();
-  }
-
-  else if(user_answer == 1) {
-    correctAnswer();
-  }
+  elli1 = ellipse(730,height/1.25,boxSize*2,boxSize*2);
 
 }
 
@@ -94,8 +76,8 @@ function mousePressed() {
   } else {
     locked = false;
   }
-  xOffset = mouseX - bx;
-  yOffset = mouseY - by;
+  xOffset = mouseX - 730;
+  yOffset = mouseY - (height/1.25);
 
   }
 
@@ -118,7 +100,8 @@ function mouseReleased() {
   )
      {
        s_fill = ('#E56365');
-       user_answer = 1; // the user picked the correct answer
+      imageMode(CORNER);
+      image(correctAns, 0, 0, windowWidth, windowHeight);
        
      }
 
@@ -131,27 +114,4 @@ function toMenu(){
   
 function toHome() {
     window.location = "index.html";
-}
-
-function wrongAnswer() {
-  imageMode(CORNER);
-  image(wrong, 0, 0, windowWidth, windowHeight);
-}
-
-function correctAnswer() {
-  imageMode(CORNER);
-  image(correct, 0, 0, windowWidth, windowHeight);
-
-  nextButton = createButton("NEXT");
-  nextButton.position(windowWidth*4/5, windowHeight*4/5);
-  nextButton.mousePressed(level2);
-
-}
-
-function level2() {
-  window,location = "matchTheShape2.html"
-}
-
-function level1() {
-  window.location = "matchtheshape.html"
 }
