@@ -92,7 +92,7 @@ function mouseDragged() {
 function mouseReleased() {
   locked = false;
 
-  // if the box is released over the correct shadow
+  // if the circle is released over the correct shadow
   if (
     mouseX > 400 - boxSize &&
     mouseX < 400 + boxSize &&
