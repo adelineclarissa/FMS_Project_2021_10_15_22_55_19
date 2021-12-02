@@ -37,6 +37,14 @@ function preload() {
     menuButton.style('font-size', '22px');
     menuButton.mouseReleased(toMenu);
 
+    //Instruction button
+  backButton = createButton("?");
+  backButton.position(280, 0);
+  backButton.style('background-color', '#00BFFF');
+  backButton.style('padding', '20px 40px');
+  backButton.style('font-size', '22px');
+  backButton.mouseReleased(toInstructions);
+
     textSize(40);
     textFont(myFont);
     text('Which object has the same\ncolor as the star?', 0.1*windowWidth, 0.13*windowWidth);
@@ -104,6 +112,10 @@ function preload() {
 
   function toMenu() {
     window.location = "menu.html";
+  }
+
+  function toInstructions() {
+    window.location = "instructions.html";
   }
 
   function level2() {
