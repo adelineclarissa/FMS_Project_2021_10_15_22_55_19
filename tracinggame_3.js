@@ -1,4 +1,4 @@
-let timer = 30
+let timer = 40
 
 function preload(){
   wrong = loadImage('assets/wrong.png');
@@ -40,32 +40,31 @@ function setup() {
   checkButton.style('background-color', '#F2BCD6');
   checkButton.style('padding', '20px 40px');
   checkButton.style('font-size', '22px');
-  checkButton.mouseReleased(tolevel2);
+  checkButton.mouseReleased(tofinish);
 
   fill('green');
   textSize(50);
   textFont(myFont);
-  text('Draw a big and yummy cookie! You have 30 seconds', 450, 80)
+  text('Draw a ferocious bear! You have 40 seconds', 450, 80)
 }
 
 function draw(){
-  textSize(100);
-  textFont(myFont);
-  text(timer, 460, 500);
-  fill('black');
-  if (frameCount % 60 == 0 && timer > 0) {
-    fill('#9BDEEB');
-    noStroke();
-    rect(460, 420, 120, 120);
-    timer --;
-  }
-
-  if (timer == 0){
-   imageMode(CORNER);
-   image(wrong, 0, 0, windowWidth, windowHeight);
-  }
-
+    textSize(100);
+    textFont(myFont);
+    text(timer, 460, 500);
+    fill('black');
+    if (frameCount % 60 == 0 && timer > 0) {
+      fill('#9BDEEB');
+      noStroke();
+      rect(460, 420, 120, 120);
+      timer --;
+    }
+    if (timer == 0){
+        imageMode(CORNER);
+        image(wrong, 0, 0, windowWidth, windowHeight);
+    }
 }
+
 
 /*function checkAnswer(x, y, myWidth, myHeight){
   //print(x + " " + y + " " + myWidth + " " + myHeight);
@@ -92,11 +91,11 @@ function draw(){
 function clearCanvas(){
   clear();
   setup();
-  timer = 30;
+  timer = 40;
 }
 
 function toMenu(){
-  window.location = "menu.html";
+  window.location = "menu.html"
 }
 
 function toHome() {
@@ -108,6 +107,6 @@ function mouseDragged(){
 	ellipse(mouseX, mouseY, 20, 20); 
 }
 
-function tolevel2(){
-  window.location = "liecheck.html";
-}
+function tofinish(){
+    window.location = "liecheck_3.html"
+  }
