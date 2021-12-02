@@ -6,6 +6,7 @@ let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
 let s_fill = '#999999'; // the color of the shadow
+let user_answer = 999;
 
 function preload() {
   correctAns = loadImage('assets/correct_building.png.jpg');
@@ -49,10 +50,10 @@ function draw() {
   
     // Test if the cursor is over the box
     if (
-      mouseX > bx - boxSize &&
-      mouseX < bx + boxSize &&
-      mouseY > by - boxSize &&
-      mouseY < by + boxSize
+      mouseX > bx - boxSize*2 &&
+      mouseX < bx + boxSize*2 &&
+      mouseY > by - boxSize*2 &&
+      mouseY < by + boxSize*2
     ) {
       overBox = true;
       if (!locked) {
@@ -65,7 +66,7 @@ function draw() {
 
   // Draw the ellipse
   fill('#E56365')
-  elli1 = ellipse(730,height/1.25,boxSize*2,boxSize*2);
+  elli1 = ellipse(bx,by,boxSize*2,boxSize*2);
 
 }
 
@@ -76,8 +77,8 @@ function mousePressed() {
   } else {
     locked = false;
   }
-  xOffset = mouseX - 730;
-  yOffset = mouseY - (height/1.25);
+  xOffset = mouseX - bx;
+  yOffset = mouseY - by;
 
   }
 
@@ -100,8 +101,7 @@ function mouseReleased() {
   )
      {
        s_fill = ('#E56365');
-      imageMode(CORNER);
-      image(correctAns, 0, 0, windowWidth, windowHeight);
+       user_answer = 1;
        
      }
 
