@@ -86,10 +86,6 @@ function toMenu() {
   window.location = "menu.html";
 }
 
-function toInstructions() {
-  window.location = "instructions.html";
-}
-
 function level1() {
   window.location = "colorMe_1.html";
 }

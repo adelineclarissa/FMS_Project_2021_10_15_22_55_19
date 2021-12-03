@@ -106,10 +106,6 @@ function preload() {
      userAnswer = 0;
   }
 
-  function toInstructions() {
-    window.location = "instructions.html";
-  }
-
   function mousePressed() {
     if (userAnswer == 1) {
       toMenu();

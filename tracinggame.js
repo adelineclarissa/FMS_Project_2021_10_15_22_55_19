@@ -1,13 +1,4 @@
-let timer = 30
-
-function preload(){
-  wrong = loadImage('assets/wrong.png');
-
-  myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
-}
-
 function setup() {
-
   createCanvas(windowWidth, windowHeight);
   background('#9BDEEB');
 
@@ -35,9 +26,8 @@ function setup() {
   insButton.style('font-size', '22px');
   insButton.mouseReleased(toInstructions);
 
-  //reset Button
   resetButton = createButton("Reset");
-  resetButton.position(.925*windowWidth, .92*windowHeight);
+  resetButton.position(1720, 850);
   resetButton.style('background-color', '#F2BCD6');
   resetButton.style('padding', '20px 40px');
   resetButton.style('font-size', '22px');
@@ -76,36 +66,13 @@ function draw(){
 
 }
 
-/*function checkAnswer(x, y, myWidth, myHeight){
-  //print(x + " " + y + " " + myWidth + " " + myHeight);
-  let black = color(0,0,0,255);
-  let passStatus = false;
-  let mycolor;
-  let currentcolor;
-
-  for(let i = x; i < (x + myWidth); i++){
-    for(let j = y; j < (y + myHeight); j++){
-      mycolor = get(i, j);
-      print(mycolor);
-      //currentcolor = color(mycolor);
-      if(mycolor.toString() != black.toString()){
-        passStatus = false;
-      }
-    }
-  }
-  if(passStatus === true){
-    clear();
-  }
-}*/
-
 function clearCanvas(){
   clear();
-  setup();
-  timer = 30;
+  background('#9BDEEB');
 }
 
 function toMenu(){
-  window.location = "menu.html";
+  window.location = "menu.html"
 }
 
 function toHome() {
@@ -113,7 +80,7 @@ function toHome() {
 }
 
 function mouseDragged(){
-  fill(0,0,0,255);
+  fill('black');
 	ellipse(mouseX, mouseY, 20, 20); 
 }
 

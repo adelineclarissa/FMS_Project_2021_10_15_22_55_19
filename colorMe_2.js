@@ -114,10 +114,6 @@ function preload() {
     window.location = "menu.html";
   }
 
-  function toInstructions() {
-    window.location = "instructions.html";
-  }
-
   function level2() {
     window.location = "colorMe_2.html";
   }
