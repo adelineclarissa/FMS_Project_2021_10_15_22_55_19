@@ -19,7 +19,7 @@ function preload() {
     //home button
     homeButton = createButton("Home");
     homeButton.position(0,0);
-    homeButton.style('background-color', '#00BFFF');
+    homeButton.style('background-color', '#D3A6ED');
     homeButton.style('padding', '20px 40px');
     homeButton.style('font-size', '22px');
     homeButton.mouseReleased(toHome);
@@ -27,7 +27,7 @@ function preload() {
     // menu button
     backButton = createButton("Menu");
     backButton.position(140,0);
-    backButton.style('background-color', '#D3A6ED');
+    backButton.style('background-color', '#F2BCD6');
     backButton.style('padding', '20px 40px');
     backButton.style('font-size', '22px');
     backButton.mouseReleased(toMenu);
