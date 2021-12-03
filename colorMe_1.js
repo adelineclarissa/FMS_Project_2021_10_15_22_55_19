@@ -38,12 +38,12 @@ function setup() {
   menuButton.mouseReleased(toMenu);
 
   //Instruction button
-  backButton = createButton("?");
-  backButton.position(280, 0);
-  backButton.style('background-color', '#00BFFF');
-  backButton.style('padding', '20px 40px');
-  backButton.style('font-size', '22px');
-  backButton.mouseReleased(toInstructions);
+  insButton = createButton("?");
+  insButton.position(277, 0);
+  insButton.style('background-color', '#00BFFF');
+  insButton.style('padding', '20px 40px');
+  insButton.style('font-size', '22px');
+  insButton.mouseReleased(toInstructions);
 
   textSize(40);
   textFont(myFont);
@@ -84,10 +84,6 @@ function toHome() {
 
 function toMenu() {
   window.location = "menu.html";
-}
-
-function toInstructions() {
-  window.location = "instructions.html";
 }
 
 function level1() {
