@@ -10,26 +10,17 @@ function setup() {
     // home button
     homeButton = createButton("Home");
     homeButton.position(0,0);
-    homeButton.style('background-color', '#D3A6ED');
     homeButton.style('padding', '20px 40px');
     homeButton.style('font-size', '22px');
     homeButton.mouseReleased(toHome);
-
-    // menu button
-    menuButton = createButton("Menu");
-    menuButton.position(140,0);
-    menuButton.style('background-color', '#F2BCD6');
-    menuButton.style('padding', '20px 40px');
-    menuButton.style('font-size', '22px');
-    menuButton.mouseReleased(toMenu);
-
-    //Instruction button
-    insButton = createButton("?");
-    insButton.position(275, 0);
-    insButton.style('background-color', '#00BFFF');
-    insButton.style('padding', '20px 40px');
-    insButton.style('font-size', '22px');
-    insButton.mouseReleased(toInstructions);
+  
+    // back button
+    backButton = createButton("Back");
+    backButton.position(141,0);
+    backButton.style('background-color', '#F2BCD6');
+    backButton.style('padding', '20px 40px');
+    backButton.style('font-size', '22px');
+    backButton.mouseReleased(toMenu);
 
     //Yes button
     yesButton = createButton("Yes");
@@ -48,7 +39,7 @@ function setup() {
     noButton.mouseReleased(restartlevel);
 
   fill('green');
-  textSize(50);
+  textSize(60);
   textFont(myFont);
 
   text('Did you really finish your drawing? Do not lie!!', windowWidth*.2, windowHeight*.3)
@@ -69,8 +60,4 @@ function restartlevel(){
 
 function nextlevel(){
     window.location = "tracinggame_2.html";
-}
-
-function toInstructions() {
-  window.location = "instructions.html"
 }
