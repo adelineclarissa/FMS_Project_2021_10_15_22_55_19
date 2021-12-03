@@ -41,7 +41,6 @@ function setup() {
   insButton.style('font-size', '22px');
   insButton.mouseReleased(toInstructions);
 
-
   // Text 
   textSize(40);
   textFont(myFont);
@@ -50,7 +49,6 @@ function setup() {
   // formate : image, x axis , y axis , xsize , ysize
   image(cat, 430, 430, 200, 200);
   image(oval, 800, 100, 600, 700);
-
 
   // Answer buttons 
   ansBox1 = createButton("C");
@@ -67,8 +65,6 @@ function setup() {
   ansBox3.position(500, 250);
   ansBox3.style('background-color', '#FFD700');
 
-
-
   // Letter Buttons 
 
   letterA = createButton("A");
@@ -76,7 +72,6 @@ function setup() {
   letterA.style('background-color', '#FF4500');
   letterA.style('font-size', '30px');
   letterA.style('padding', '20px 20px');
-  //letterA.mouseReleased(aPressed);
   letterA.mouseReleased(correctAnswer);
 
   letterB = createButton("B");
@@ -213,9 +208,6 @@ function setup() {
   letterX.style('padding', '20px 20px');
   letterX.mouseReleased(wrongAnswer);
 
-
-
-
 }
 
 function toHome() {
@@ -231,8 +223,6 @@ function toInstructions() {
 }
 
 
-
-
 function level1() {
   window.location = "buildingwords.html";
 }
@@ -241,14 +231,9 @@ function level2() {
   window.location = "buildingwords2.html";
 }
 
+// removes buttons
 function correctAnswer() {
 
-  // letterA.remove();
-  // ansBox2.remove();
-  // lettera = createButton("A");
-  // lettera.position(350,250);
-  // remove the buttons
-  // remove ansBox buttons
   ansBox1.remove();
   ansBox2.remove();
   ansBox3.remove();
@@ -282,9 +267,9 @@ function correctAnswer() {
   userAns = 1;
 }
 
+// removes buttons
 function wrongAnswer() {
 
-  // remove the letter buttons
   ansBox1.remove();
   ansBox2.remove();
   ansBox3.remove();
@@ -318,54 +303,7 @@ function wrongAnswer() {
   userAns = 0;
 }
 
-// function aPressed() {
-//   letterA.remove();
-//   ansBox2.remove();
-//   lettera = createButton("A");
-//   lettera.position(350,250);
-//   window.location ="buildingwords2.html"
-// }
-
-
-
-
-
-//
-
-
-
-
-// MY CODE 
-
-
-
-
-
-// function correctAns(){
-//   imageMode(CORNER);
-//   letterA.remove();
-//    image(correctAns, 0, 0, windowWidth, windowHeight);
-//    userAns = 1;
-// }
-
-// function level1() {
-//   window.location = "buildingwords.html";
-// }
-
-// function level2() {
-//   window.location = "buildingwords1.html";
-// }
-
-
-
-// button colors
-// FF8C00 dark orange
-// 2F4F4F grey
-// ADD8E6 blue
-// E0FFFF lightBlue
-// 98FB98 paleGreen
-// FFDAB9 PEACH
-
+//next level screen
 function mousePressed() {
   if (userAns == 1) {
     level2();

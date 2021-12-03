@@ -12,7 +12,6 @@ function preload() {
 
   }
   
-  
   function setup() {
     createCanvas(windowWidth, windowHeight);
     background('#9BDEEB');
@@ -55,29 +54,23 @@ function preload() {
     ansBox1 = createButton("F");
     ansBox1.position(200,250);
     ansBox1.style('background-color', '#FFD700');
-    
   
     ansBox2 = createButton("O");
     ansBox2.position(350,250);
     ansBox2.style('background-color', '#FFD700');
     
-  
     ansBox3 = createButton(" ");
     ansBox3.position(500,250);
     ansBox3.style('background-color', '#FFD700');
     ansBox3.style('font-size', '30px');
     ansBox3.style('padding', '50px 60px');
-  
     
-    
-    // Letter Buttons 
-    
+  // Letter Buttons 
   letterA = createButton("A");
   letterA.position(1000, 500);
   letterA.style('background-color', '#FF4500');
   letterA.style('font-size', '30px');
   letterA.style('padding', '20px 20px');
-  //letterA.mouseReleased(aPressed);
   letterA.mouseReleased(wrongAnswer);
 
   letterB = createButton("B");
@@ -128,7 +121,6 @@ function preload() {
   letterZ.style('font-size', '30px');
   letterZ.style('padding', '20px 20px');
   letterZ.mouseReleased(wrongAnswer);
-  // letterT.mouseReleased(tPressed);
 
   letterH = createButton("H");
   letterH.position(1000, 400);
@@ -235,14 +227,9 @@ function level3() {
   window.location = "buildingwords3.html";
 }
 
+// removes buttons
 function correctAnswer() {
-
-  // letterA.remove();
-  // ansBox2.remove();
-  // lettera = createButton("A");
-  // lettera.position(350,250);
-  // remove the buttons
-  // remove ansBox buttons
+  
   ansBox1.remove();
   ansBox2.remove();
   ansBox3.remove();
@@ -276,9 +263,9 @@ function correctAnswer() {
   userAns = 1;
 }
 
+// removes buttons
 function wrongAnswer() {
 
-  // remove the letter buttons
   ansBox1.remove();
   ansBox2.remove();
   ansBox3.remove();
@@ -312,9 +299,6 @@ function wrongAnswer() {
   userAns = 0;
 }
 
-
-  
-
 function mousePressed() {
   if (userAns == 1) {
     level3();
@@ -323,5 +307,3 @@ function mousePressed() {
     level2();
   }
 }
-
-

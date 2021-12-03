@@ -55,7 +55,6 @@ function preload() {
     ansBox1.position(100,250);
     ansBox1.style('background-color', '#FFD700');
     
-  
     ansBox2 = createButton("A");
     ansBox2.position(250,250);
     ansBox2.style('background-color', '#FFD700');
@@ -63,28 +62,23 @@ function preload() {
     ansBox3 = createButton("R");
     ansBox3.position(400,250);
     ansBox3.style('background-color', '#FFD700');
-    // ansBox3.style('font-size', '30px');
-    // ansBox3.style('padding', '50px 60px');
 
     ansBox4 = createButton("T");
     ansBox4.position(550,250);
     ansBox4.style('background-color', '#FFD700');
-    
-
+  
     ansBox5 = createButton(" ");
     ansBox5.position(700,250);
     ansBox5.style('background-color', '#FFD700');
     ansBox5.style('font-size', '30px');
     ansBox5.style('padding', '50px 60px');
     
-    
-    // Letter Buttons 
-    letterA = createButton("A");
+  // Letter Buttons 
+  letterA = createButton("A");
   letterA.position(1000, 500);
   letterA.style('background-color', '#FF4500');
   letterA.style('font-size', '30px');
   letterA.style('padding', '20px 20px');
-  //letterA.mouseReleased(aPressed);
   letterA.mouseReleased(wrongAnswer);
 
   letterB = createButton("B");
@@ -135,7 +129,7 @@ function preload() {
   letterZ.style('font-size', '30px');
   letterZ.style('padding', '20px 20px');
   letterZ.mouseReleased(wrongAnswer);
-  // letterT.mouseReleased(tPressed);
+  
 
   letterH = createButton("H");
   letterH.position(1000, 400);
@@ -244,14 +238,9 @@ function level3() {
   window.location = "menu.html";
 }
 
+// removes buttons
 function correctAnswer() {
 
-  // letterA.remove();
-  // ansBox2.remove();
-  // lettera = createButton("A");
-  // lettera.position(350,250);
-  // remove the buttons
-  // remove ansBox buttons
   ansBox1.remove();
   ansBox2.remove();
   ansBox3.remove();
@@ -325,9 +314,6 @@ function wrongAnswer() {
   userAns = 0;
 }
 
-
-  
-
 function mousePressed() {
   if (userAns == 1) {
     level3();
@@ -336,10 +322,3 @@ function mousePressed() {
     level2();
   }
 }
-
-
-
-  
-  
-  
-  
