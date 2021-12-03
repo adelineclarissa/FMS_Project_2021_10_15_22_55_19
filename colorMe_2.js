@@ -130,3 +130,7 @@ function preload() {
       level2();
     }
   }
+
+  function toInstructions() {
+    window.location = "instructions.html"
+  }

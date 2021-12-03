@@ -9,8 +9,8 @@ let s_fill = '#999999'; // the color of the shadow
 let user_answer = 999;
 
 function preload() {
-  correctAns = loadImage('assets/correct_building.png.jpg');
-  wrongAns = loadImage('assets/wrong_building.png.jpg');
+  correctAns = loadImage('assets/correct_home_menu.png');
+  myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
 }
 
 function setup() {
@@ -50,9 +50,14 @@ function setup() {
 function draw() {
     background('#9BDEEB');
 
-    fill(s_fill)
-    s_rect = rect(400,height/3,boxSize,boxSize);
+    textSize(30);
+    textFont(myFont);
+    fill('black');
+    text('Drag and drop the red circle to the grey circle!', windowWidth*1/5, 130);
+
     fill('#999999')
+    s_rect = rect(400,height/3,boxSize,boxSize);
+    fill(s_fill)
     s_ellipse = ellipse(730,height/3,boxSize*2,boxSize*2);
     fill('#999999')
     s_triangle = triangle(950,height*(2.3/5),1200,height*(2.3/5),1075,height/5)
@@ -76,6 +81,15 @@ function draw() {
   // Draw the ellipse
   fill('#E56365')
   elli1 = ellipse(bx,by,boxSize*2,boxSize*2);
+
+  // check the user answer
+  if (user_answer == 0) {
+    wrongAnswer();
+  }
+
+  else if(user_answer == 1) {
+    correctAnswer();
+  }
 
 }
 
@@ -103,13 +117,13 @@ function mouseReleased() {
 
   // if the circle is released over the correct shadow
   if (
-    mouseX > 400 - boxSize &&
-    mouseX < 400 + boxSize &&
+    mouseX > 730 - boxSize &&
+    mouseX < 730 + boxSize &&
     mouseY > height/3 - boxSize &&
     mouseY < height/3 + boxSize
   )
      {
-       s_fill = ('#E56365');
+      s_fill = ('#E56365')
        user_answer = 1;
        
      }
@@ -127,4 +141,10 @@ function toHome() {
 
 function toInstructions() {
   window.location = "instructions.html"
+}
+
+function correctAnswer() {
+  imageMode(CORNER);
+  image(correctAns, 0, 0, windowWidth, windowHeight);
+
 }
