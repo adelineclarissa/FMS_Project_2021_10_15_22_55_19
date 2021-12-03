@@ -45,7 +45,7 @@ function setup() {
   fill('green');
   textSize(50);
   textFont(myFont);
-  text('Draw a toasty pizza! You have 30 seconds', 450, 80)
+  text('Draw a toasty pizza! You have 30 seconds', .25*windowWidth, .1*windowHeight)
 }
 
 function draw(){

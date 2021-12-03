@@ -45,7 +45,7 @@ function setup() {
   fill('green');
   textSize(50);
   textFont(myFont);
-  text('Draw a big and yummy cookie! You have 30 seconds', 450, 80)
+  text('Draw a big and yummy cookie! You have 30 seconds', .2*windowWidth, .1*windowHeight);
 }
 
 function draw(){

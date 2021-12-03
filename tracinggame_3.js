@@ -45,7 +45,7 @@ function setup() {
   fill('green');
   textSize(50);
   textFont(myFont);
-  text('Draw a ferocious bear! You have 40 seconds', 450, 80)
+  text('Draw a ferocious bear! You have 40 seconds', .25*windowWidth, .1*windowHeight)
 }
 
 function draw(){
