@@ -33,7 +33,7 @@ function setup() {
   insButton.mouseReleased(toInstructions);
 
   resetButton = createButton("Reset");
-  resetButton.position(1720, 850);
+  resetButton.position(0, windowHeight-100);
   resetButton.style('background-color', '#F2BCD6');
   resetButton.style('padding', '20px 40px');
   resetButton.style('font-size', '22px');

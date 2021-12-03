@@ -37,7 +37,7 @@ function setup() {
 
   //reset Button
   resetButton = createButton("Reset");
-  resetButton.position(.925*windowWidth, .92*windowHeight);
+  resetButton.position(0, windowHeight-100);
   resetButton.style('background-color', '#F2BCD6');
   resetButton.style('padding', '20px 40px');
   resetButton.style('font-size', '22px');
