@@ -31,6 +31,14 @@ function preload() {
     backButton.style('padding', '20px 40px');
     backButton.style('font-size', '22px');
     backButton.mouseReleased(toMenu);
+
+    //Instructions button
+  insButton = createButton("?");
+  insButton.position(277, 0);
+  insButton.style('background-color', '#00BFFF');
+  insButton.style('padding', '20px 40px');
+  insButton.style('font-size', '22px');
+  insButton.mouseReleased(toInstructions);
   
     // Text 
     textSize(40);
@@ -145,7 +153,7 @@ function preload() {
 
   letterN = createButton("N");
   letterN.position(1100, 300);
-  letterN.style('background-color', '#B22222');
+  letterN.style('background-color', '#20B2AA');
   letterN.style('font-size', '30px');
   letterN.style('padding', '20px 20px');
   letterN.mouseReleased(wrongAnswer);
@@ -187,7 +195,7 @@ function preload() {
 
   letterU = createButton("U");
   letterU.position(900, 300);
-  letterU.style('background-color', '#990033');
+  letterU.style('background-color', '#FF8C00');
   letterU.style('font-size', '30px');
   letterU.style('padding', '20px 20px');
   letterU.mouseReleased(wrongAnswer);
@@ -208,7 +216,7 @@ function preload() {
 
   letterX = createButton("X");
   letterX.position(910, 600);
-  letterX.style('background-color', '#003366');
+  letterX.style('background-color', '#FA8072');
   letterX.style('font-size', '30px');
   letterX.style('padding', '20px 20px');
   letterX.mouseReleased(wrongAnswer);
@@ -224,7 +232,9 @@ function preload() {
     window.location = "menu.html";
   }
   
-//NOT code
+  function toInstructions() {
+    window.location = "instructions.html"
+  }
 
 function level2() {
   window.location = "buildingwords3.html";

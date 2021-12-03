@@ -33,6 +33,15 @@ function setup() {
   backButton.style('font-size', '22px');
   backButton.mouseReleased(toMenu);
 
+  //Instructions button
+  insButton = createButton("?");
+  insButton.position(277, 0);
+  insButton.style('background-color', '#00BFFF');
+  insButton.style('padding', '20px 40px');
+  insButton.style('font-size', '22px');
+  insButton.mouseReleased(toInstructions);
+
+
   // Text 
   textSize(40);
   textFont(myFont);
@@ -136,7 +145,7 @@ function setup() {
 
   letterN = createButton("N");
   letterN.position(1100, 300);
-  letterN.style('background-color', '#B22222');
+  letterN.style('background-color', '#FF4500');
   letterN.style('font-size', '30px');
   letterN.style('padding', '20px 20px');
   letterN.mouseReleased(wrongAnswer);
@@ -178,7 +187,7 @@ function setup() {
 
   letterU = createButton("U");
   letterU.position(900, 300);
-  letterU.style('background-color', '#990033');
+  letterU.style('background-color', '#FF8C00');
   letterU.style('font-size', '30px');
   letterU.style('padding', '20px 20px');
   letterU.mouseReleased(wrongAnswer);
@@ -199,7 +208,7 @@ function setup() {
 
   letterX = createButton("X");
   letterX.position(910, 600);
-  letterX.style('background-color', '#003366');
+  letterX.style('background-color', '#FA8072');
   letterX.style('font-size', '30px');
   letterX.style('padding', '20px 20px');
   letterX.mouseReleased(wrongAnswer);
@@ -217,8 +226,12 @@ function toMenu() {
   window.location = "menu.html";
 }
 
+function toInstructions() {
+  window.location = "instructions.html"
+}
 
-//NOT code
+
+
 
 function level1() {
   window.location = "buildingwords.html";
