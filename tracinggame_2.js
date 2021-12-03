@@ -117,3 +117,7 @@ function mouseDragged(){
 function tolevel3(){
     window.location = "liecheck_2.html";
   }
+
+  function toInstructions() {
+    window.location = "instructions.html"
+  }

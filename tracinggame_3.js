@@ -119,3 +119,7 @@ function mouseDragged(){
 function tofinish(){
     window.location = "liecheck_3.html"
   }
+
+  function toInstructions() {
+    window.location = "instructions.html"
+  }
