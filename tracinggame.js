@@ -2,6 +2,7 @@ let timer = 30
 
 function preload() {
   myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
+  wrong = loadImage('assets/wrong.png');
 }
 
 function setup() {
@@ -74,7 +75,8 @@ function draw(){
 
 function clearCanvas(){
   clear();
-  background('#9BDEEB');
+  setup();
+  timer = 30;
 }
 
 function toMenu(){
