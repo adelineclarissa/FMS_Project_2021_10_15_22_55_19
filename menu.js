@@ -21,7 +21,7 @@ function setup() {
     // Games buttons
     matchButton = createButton('Match the shape!')
     colorButton = createButton('Color Me Right!')
-    traceButton = createButton('Tracing Game!')
+    traceButton = createButton('Drawing Game!')
     wordButton = createButton('Building Words!')
     
     matchButton.position(300,200);

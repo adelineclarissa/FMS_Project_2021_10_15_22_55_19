@@ -1,34 +1,39 @@
 let timer = 30
 
-function preload(){
-  wrong = loadImage('assets/wrong.png');
-
+function preload() {
   myFont = loadFont('assets/BalsamiqSans-Bold.ttf');
 }
 
 function setup() {
-
   createCanvas(windowWidth, windowHeight);
   background('#9BDEEB');
 
   // home button
   homeButton = createButton("Home");
-  homeButton.position(0*windowWidth,0*windowHeight);
+  homeButton.position(0,0);
+  homeButton.style('background-color', '#D3A6ED');
   homeButton.style('padding', '20px 40px');
   homeButton.style('font-size', '22px');
   homeButton.mouseReleased(toHome);
 
-  // back button
-  backButton = createButton("Back");
-  backButton.position(.075*windowWidth,0*windowHeight);
-  backButton.style('background-color', '#F2BCD6');
-  backButton.style('padding', '20px 40px');
-  backButton.style('font-size', '22px');
-  backButton.mouseReleased(toMenu);
+  // menu button
+  menuButton = createButton("Menu");
+  menuButton.position(140,0);
+  menuButton.style('background-color', '#F2BCD6');
+  menuButton.style('padding', '20px 40px');
+  menuButton.style('font-size', '22px');
+  menuButton.mouseReleased(toMenu);
 
-  //reset Button
+  //Instruction button
+  insButton = createButton("?");
+  insButton.position(277, 0);
+  insButton.style('background-color', '#00BFFF');
+  insButton.style('padding', '20px 40px');
+  insButton.style('font-size', '22px');
+  insButton.mouseReleased(toInstructions);
+
   resetButton = createButton("Reset");
-  resetButton.position(.925*windowWidth, .92*windowHeight);
+  resetButton.position(1720, 850);
   resetButton.style('background-color', '#F2BCD6');
   resetButton.style('padding', '20px 40px');
   resetButton.style('font-size', '22px');
@@ -43,9 +48,9 @@ function setup() {
   checkButton.mouseReleased(tolevel2);
 
   fill('green');
-  textSize(50);
+  textSize(40);
   textFont(myFont);
-  text('Draw a big and yummy cookie! You have 30 seconds', .2*windowWidth, .1*windowHeight);
+  text('Draw a big and yummy cookie! You have 30 seconds', 450, 80)
 }
 
 function draw(){
@@ -67,36 +72,13 @@ function draw(){
 
 }
 
-/*function checkAnswer(x, y, myWidth, myHeight){
-  //print(x + " " + y + " " + myWidth + " " + myHeight);
-  let black = color(0,0,0,255);
-  let passStatus = false;
-  let mycolor;
-  let currentcolor;
-
-  for(let i = x; i < (x + myWidth); i++){
-    for(let j = y; j < (y + myHeight); j++){
-      mycolor = get(i, j);
-      print(mycolor);
-      //currentcolor = color(mycolor);
-      if(mycolor.toString() != black.toString()){
-        passStatus = false;
-      }
-    }
-  }
-  if(passStatus === true){
-    clear();
-  }
-}*/
-
 function clearCanvas(){
   clear();
-  setup();
-  timer = 30;
+  background('#9BDEEB');
 }
 
 function toMenu(){
-  window.location = "menu.html";
+  window.location = "menu.html"
 }
 
 function toHome() {
@@ -104,10 +86,14 @@ function toHome() {
 }
 
 function mouseDragged(){
-  fill(0,0,0,255);
+  fill('black');
 	ellipse(mouseX, mouseY, 20, 20); 
 }
 
 function tolevel2(){
   window.location = "liecheck.html";
+}
+
+function toInstructions() {
+  window.location = "instructions.html"
 }

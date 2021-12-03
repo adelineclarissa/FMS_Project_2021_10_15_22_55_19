@@ -130,3 +130,7 @@ function mousePressed() {
     level1();
   }
 }
+
+function toInstructions() {
+  window.location = "instructions.html"
+}

@@ -126,3 +126,7 @@ function preload() {
   function level3() {
     window.location = "colorMe_3.html";
   }
+
+  function toInstructions() {
+    window.location = "instructions.html"
+  }

@@ -13,19 +13,27 @@ function setup() {
 
   // home button
   homeButton = createButton("Home");
-  homeButton.position(0*windowWidth,0*windowHeight);
+  homeButton.position(0,0);
+  homeButton.style('background-color', '#D3A6ED');
   homeButton.style('padding', '20px 40px');
   homeButton.style('font-size', '22px');
   homeButton.mouseReleased(toHome);
 
-  // back button
-  backButton = createButton("Back");
-  backButton.position(.075*windowWidth,0*windowHeight);
-  backButton.style('background-color', '#F2BCD6');
-  backButton.style('padding', '20px 40px');
-  backButton.style('font-size', '22px');
-  backButton.mouseReleased(toMenu);
+  // menu button
+  menuButton = createButton("Menu");
+  menuButton.position(140,0);
+  menuButton.style('background-color', '#F2BCD6');
+  menuButton.style('padding', '20px 40px');
+  menuButton.style('font-size', '22px');
+  menuButton.mouseReleased(toMenu);
 
+  //Instruction button
+  insButton = createButton("?");
+  insButton.position(277, 0);
+  insButton.style('background-color', '#00BFFF');
+  insButton.style('padding', '20px 40px');
+  insButton.style('font-size', '22px');
+  insButton.mouseReleased(toInstructions);
   //reset Button
   resetButton = createButton("Reset");
   resetButton.position(.925*windowWidth, .92*windowHeight);
@@ -108,4 +116,8 @@ function mouseDragged(){
 
 function tolevel3(){
     window.location = "liecheck_2.html";
+  }
+
+  function toInstructions() {
+    window.location = "instructions.html"
   }
